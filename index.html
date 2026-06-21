@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezzet Restaurant - Menü</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Welcome Screen Animation -->
+<div id="welcomeScreen" class="welcome-screen">
+    <div class="welcome-logo text-center">
+        LEZZET<br>
+        <span style="font-size: 1.2rem; letter-spacing: 6px; color: var(--accent-copper); font-family: 'Outfit', sans-serif;">RESTAURANT</span>
+    </div>
+    <div class="welcome-subtitle text-center">
+        L'art de la Gastronomie
+    </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-luxury">
+    <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+        <a class="navbar-brand m-0" href="#" onclick="location.reload();">LEZZET</a>
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" style="border-color: var(--accent-gold); color: var(--accent-gold); font-family: 'Outfit', sans-serif;">
+                TR
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" style="background-color: rgba(18,18,18,0.95); border-color: var(--border-delicate);">
+                <li><a class="dropdown-item active" href="#">Türkçe</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Français</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container pb-5 mt-4">
+
+    <!-- ============================================== -->
+    <!-- VIEW: HOME (Ana Sayfa / Kategoriler)           -->
+    <!-- ============================================== -->
+    <div id="view-home" class="app-view active">
+        
+        <!-- Kategoriler Kaydırıcısı (Yatay Menü Navigasyonu İçin) -->
+        <div class="category-slider">
+            <a href="#" class="category-pill open-category" data-category="tadim" data-title="Tadım Menüsü">Tadım Menüsü</a>
+            <a href="#" class="category-pill open-category" data-category="baslangiclar" data-title="Başlangıçlar">Başlangıçlar</a>
+            <a href="#" class="category-pill open-category" data-category="deniz" data-title="Denizden Gelenler">Denizden Gelenler</a>
+            <a href="#" class="category-pill open-category" data-category="ana-yemekler" data-title="Ana Yemekler">Ana Yemekler</a>
+            <a href="#" class="category-pill open-category" data-category="tatlilar" data-title="Tatlılar">Tatlılar</a>
+            <a href="#" class="category-pill open-category" data-category="sarap" data-title="Şarap Kavı">Şarap Kavı</a>
+        </div>
+
+        <div class="elegant-divider"></div>
+
+        <!-- Şefin Tavsiyeleri (Tadım Menüsü Tanıtımı) -->
+        <div class="mb-5">
+            <h3 class="mb-4 luxury-font text-center" style="font-size: 2rem;">Şefin İmza Tadım Menüsü</h3>
+            <p class="text-center text-muted mb-4" style="max-width: 600px; margin: 0 auto;">Gastronomi yolculuğumuzda şefimizin en özel seçkilerini, mevsimsel ve yerel malzemelerle yeniden yorumladığı 7 aşamalı deneyim.</p>
+            
+            <div id="chefCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner" style="border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+                    <div class="carousel-item active">
+                        <div class="product-img-wrapper" style="padding-top: 60%; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" class="d-block w-100" alt="Tadım 1">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); bottom: 0; left: 0; right: 0; padding: 40px 20px 20px;">
+                            <h4 class="luxury-font mb-2 text-gold" style="font-size: 1.8rem;">Amuse-Bouche</h4>
+                            <p class="mb-0" style="font-family: 'Outfit'; font-weight: 300;">Havyar ve Füme Yılan Balığı Tartaleti</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="product-img-wrapper" style="padding-top: 60%; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000&auto=format&fit=crop" class="d-block w-100" alt="Tadım 2">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); bottom: 0; left: 0; right: 0; padding: 40px 20px 20px;">
+                            <h4 class="luxury-font mb-2 text-gold" style="font-size: 1.8rem;">Ana Perde</h4>
+                            <p class="mb-0" style="font-family: 'Outfit'; font-weight: 300;">Wagyu A5 Striploin & Trüf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-light open-category" data-category="tadim" data-title="Tadım Menüsü" style="border-color: var(--accent-gold); color: var(--accent-gold); padding: 10px 30px; letter-spacing: 2px;">MENÜYÜ İNCELE</a>
+            </div>
+        </div>
+
+        <div class="elegant-divider"></div>
+
+        <!-- Kategoriler Grid -->
+        <h3 class="mb-4 luxury-font text-center">Menü</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+            <div class="col">
+                <div class="card product-card h-100 open-category" data-category="baslangiclar" data-title="Başlangıçlar">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?q=80&w=800&auto=format&fit=crop" alt="Başlangıçlar">
+                    </div>
+                    <div class="card-body text-center py-2">
+                        <h4 class="card-title luxury-font mb-0 text-gold">Başlangıçlar</h4>
+                        <span class="text-muted small" style="letter-spacing: 1px;">Sıcak & Soğuk</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 open-category" data-category="deniz" data-title="Denizden Gelenler">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?q=80&w=800&auto=format&fit=crop" alt="Deniz Mahsülleri">
+                    </div>
+                    <div class="card-body text-center py-2">
+                        <h4 class="card-title luxury-font mb-0 text-gold">Denizden Gelenler</h4>
+                        <span class="text-muted small" style="letter-spacing: 1px;">Okyanus Esintileri</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 open-category" data-category="ana-yemekler" data-title="Ana Yemekler">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" alt="Ana Yemekler">
+                    </div>
+                    <div class="card-body text-center py-2">
+                        <h4 class="card-title luxury-font mb-0 text-gold">Ana Yemekler</h4>
+                        <span class="text-muted small" style="letter-spacing: 1px;">Et & Kümes Hayvanları</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card product-card h-100 open-category" data-category="tatlilar" data-title="Tatlılar">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop" alt="Tatlılar">
+                    </div>
+                    <div class="card-body text-center py-2">
+                        <h4 class="card-title luxury-font mb-0 text-gold">Tatlılar</h4>
+                        <span class="text-muted small" style="letter-spacing: 1px;">İmza Dokunuşlar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 open-category" data-category="sarap" data-title="Şarap Kavı">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop" alt="Şarap Kavı">
+                    </div>
+                    <div class="card-body text-center py-2">
+                        <h4 class="card-title luxury-font mb-0 text-gold">Şarap Kavı</h4>
+                        <span class="text-muted small" style="letter-spacing: 1px;">Sommelier Seçkisi</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW: CATEGORY (Ürün Listeleme)                -->
+    <!-- ============================================== -->
+    <div id="view-category" class="app-view">
+        <div class="d-flex align-items-center justify-content-center position-relative mb-5 mt-2">
+            <a href="#" id="btn-back-home" class="text-light position-absolute start-0"><i class="fa-solid fa-chevron-left fa-xl" style="color: var(--accent-copper);"></i></a>
+            <h2 id="cat-view-title" class="luxury-font m-0 text-gold" style="font-size: 2.2rem; letter-spacing: 1px;">Kategori Adı</h2>
+        </div>
+
+        <!-- ÜRÜN LİSTELERİ KAPSAYICILARI -->
+        
+        <!-- TADIM MENÜSÜ -->
+        <div id="list-tadim" class="row row-cols-1 g-4 product-list-container" style="display:none;">
+            <div class="col">
+                <div class="signature-dish mb-4">
+                    <p class="text-center text-muted mb-4" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">"Topraktan tabağa, mevsimin en taze ritmini dinlediğimiz bir senfoni." <br><span class="text-gold">- Executive Chef</span></p>
+                </div>
+                <div class="card product-card open-product signature-dish"
+                     data-title="7 Aşamalı İmza Tadım Menüsü" 
+                     data-img="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop"
+                     data-price="4500.00"
+                     data-desc="Amuse-Bouche, Istakoz Ravioli, Dinlendirilmiş Ördek Göğsü, Ferahlatıcı Sorbe, Wagyu A5 Striploin, Şefin İmza Peynir Tabağı, ve Altın Varaklı Çikolata Küresi.<br><br><b>Şarap Eşleşmesi (+2500 ₺):</b> Her tabağa özel olarak sommelier'imiz tarafından seçilmiş 5 kadeh şarap eşleşmesi."
+                     data-allergens="Gluten, Süt ürünü, Deniz ürünü, Kuruyemiş"
+                     data-calories=""
+                     data-soldout="false">
+                    <div class="product-img-wrapper" style="padding-top: 50%;">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" alt="Tadım Menüsü">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="product-title luxury-font m-0 text-gold mb-3" style="font-size: 1.6rem;">7 Aşamalı İmza Tadım Menüsü</h4>
+                        <p class="product-desc mb-3">Sadece akşam yemeği servisinde, tüm masa için sunulur.</p>
+                        <span class="product-price text-gold fw-bold" style="font-size: 1.4rem;">4500.00 ₺ <span class="text-muted small fw-light">/ Kişi başı</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAŞLANGIÇLAR -->
+        <div id="list-baslangiclar" class="row row-cols-1 row-cols-md-2 g-4 product-list-container" style="display:none;">
+            <!-- Signature Item -->
+            <div class="col-12 col-md-12 mb-2">
+                <div class="card product-card open-product signature-dish"
+                     data-title="Beluga Havyarı & Blini" 
+                     data-img="https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?q=80&w=800&auto=format&fit=crop"
+                     data-price="3800.00"
+                     data-desc="Hazar Denizi'nden özel tedarik edilen 30g Royal Beluga Havyarı. Ilık ev yapımı kara buğday blini, ekşi krema, frenk soğanı ve bıldırcın yumurtası ile servis edilir. <br><br><i>Şefin Notu: Havyarın narin yapısını bozmamak için sadece sedef kaşıkla tüketilmesi önerilir.</i>"
+                     data-allergens="Deniz ürünü, Gluten, Süt ürünü, Yumurta"
+                     data-calories="280"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?q=80&w=800&auto=format&fit=crop" alt="Havyar">
+                        <span class="badge badge-luxury position-absolute top-0 start-0 m-3 p-2">İmza Başlangıç</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Beluga Havyarı & Blini</h5>
+                            <span class="product-price ms-3 text-gold fw-bold">3800.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Hazar Denizi'nden 30g Royal Beluga, ılık blini ve ekşi krema eşliğinde.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Normal Items -->
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Trüflü Dana Carpaccio" 
+                     data-img="https://images.unsplash.com/photo-1608897013039-887f21d8c804?q=80&w=800&auto=format&fit=crop"
+                     data-price="650.00"
+                     data-desc="28 gün dinlendirilmiş dana bonfile dilimleri, parmesan cipsleri, taze roka, Alba beyaz trüf mantarı yağı ve kapari meyveleri."
+                     data-allergens="Süt ürünü"
+                     data-calories="320"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?q=80&w=800&auto=format&fit=crop" alt="Carpaccio">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Trüflü Dana Carpaccio</h5>
+                            <span class="product-price ms-3 text-gold">650.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Dinlendirilmiş dana bonfile, parmesan cipsi ve beyaz trüf mantarı yağı.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="İstiridye & Şampanya Köpüğü" 
+                     data-img="https://images.unsplash.com/photo-1599084990807-68c3ef0f9686?q=80&w=800&auto=format&fit=crop"
+                     data-price="850.00"
+                     data-desc="Fransa Brittany kıyılarından taze gelen 6 adet Fine de Claire istiridye. Şampanya ve yuzu köpüğü, taze frenk soğanı ile."
+                     data-allergens="Deniz ürünü"
+                     data-calories="180"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1599084990807-68c3ef0f9686?q=80&w=800&auto=format&fit=crop" alt="İstiridye">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Fine de Claire İstiridye</h5>
+                            <span class="product-price ms-3 text-gold">850.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">6 adet Fransız Fine de Claire istiridye, şampanya ve yuzu köpüğü ile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Közlenmiş İlik & Brioche" 
+                     data-img="https://images.unsplash.com/photo-1627042633145-b780d842ba45?q=80&w=800&auto=format&fit=crop"
+                     data-price="550.00"
+                     data-desc="Meşe odununda yavaşça közlenmiş dana kemik iliği. Karamelize soğan reçeli, taze kekik ve kızarmış tereyağlı brioche ekmeği eşliğinde."
+                     data-allergens="Gluten, Süt ürünü"
+                     data-calories="680"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1627042633145-b780d842ba45?q=80&w=800&auto=format&fit=crop" alt="İlik">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Közlenmiş İlik & Brioche</h5>
+                            <span class="product-price ms-3 text-gold">550.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Meşe odununda közlenmiş dana iliği, soğan reçeli ve kızarmış brioche.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DENİZDEN GELENLER -->
+        <div id="list-deniz" class="row row-cols-1 row-cols-md-2 g-4 product-list-container" style="display:none;">
+            <div class="col-12 col-md-12 mb-2">
+                <div class="card product-card open-product signature-dish"
+                     data-title="Miso Sırlı Şili Levrek" 
+                     data-img="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop"
+                     data-price="1450.00"
+                     data-desc="Saikyo miso ile 48 saat marine edilmiş Şili Levreği (Patagonya Toothfish). Siyah sarımsaklı karnabahar püresi, edamame ve zencefilli beurre blanc sos."
+                     data-allergens="Deniz ürünü, Soya, Süt ürünü"
+                     data-calories="540"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop" alt="Levrek">
+                        <span class="badge badge-luxury position-absolute top-0 start-0 m-3 p-2">İmza Deniz Mahsülü</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Miso Sırlı Şili Levrek</h5>
+                            <span class="product-price ms-3 text-gold fw-bold">1450.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Saikyo miso marineli Şili Levreği, siyah sarımsaklı karnabahar püresi ile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Istakoz Termidor" 
+                     data-img="https://images.unsplash.com/photo-1559742811-822873691df8?q=80&w=800&auto=format&fit=crop"
+                     data-price="2800.00"
+                     data-desc="Geleneksel Fransız usulü. Bütün ıstakoz, konya ve hardal dokunuşlu kremalı mantar sosuyla kendi kabuğunda fırınlanarak, gruyere peyniri graten ile sunulur."
+                     data-allergens="Deniz ürünü, Süt ürünü, Alkol"
+                     data-calories="820"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559742811-822873691df8?q=80&w=800&auto=format&fit=crop" alt="Istakoz">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Istakoz Termidor</h5>
+                            <span class="product-price ms-3 text-gold">2800.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Bütün ıstakoz, konyaklı kremalı mantar sosu ve gruyere peyniri graten.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Izgara Ahtapot Kolu" 
+                     data-img="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+                     data-price="950.00"
+                     data-desc="Ege'den taze yakalanmış ve dövülerek yumuşatılmış ahtapot kolu. Fırınlanmış taze patates, romesco sos, siyah zeytin tozu ve mikro yeşillikler."
+                     data-allergens="Deniz ürünü, Kuruyemiş (Romesco)"
+                     data-calories="410"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop" alt="Ahtapot">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Izgara Ahtapot Kolu</h5>
+                            <span class="product-price ms-3 text-gold">950.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Kömür ızgarasında ahtapot kolu, romesco sos ve siyah zeytin tozu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANA YEMEKLER -->
+        <div id="list-ana-yemekler" class="row row-cols-1 row-cols-md-2 g-4 product-list-container" style="display:none;">
+            <div class="col-12 col-md-12 mb-2">
+                <div class="card product-card open-product signature-dish"
+                     data-title="Wagyu A5 Striploin (Japonya)" 
+                     data-img="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format&fit=crop"
+                     data-price="6500.00"
+                     data-desc="Dünyanın en prestijli eti. Kagoshima bölgesinden getirilen A5 kalite Wagyu (BMS 10+). Masa başında Binchotan kömüründe mühürlenir. Himalaya tuzu, taze wasabi ve ponzu sos eşliğinde servis edilir. <br><br><i>Şefin Notu: Etin zengin yağ dokusunu tam hissetmek için 'Medium Rare' önerilir.</i>"
+                     data-allergens="Soya (Ponzu sos)"
+                     data-calories="950"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format&fit=crop" alt="Wagyu">
+                        <span class="badge badge-luxury position-absolute top-0 start-0 m-3 p-2">Premium Seçki</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Wagyu A5 Striploin (200g)</h5>
+                            <span class="product-price ms-3 text-gold fw-bold">6500.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Kagoshima'dan A5 kalite Wagyu. Masa başında Binchotan kömüründe mühürlenir.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Odun Ateşinde Kuzu Kafes" 
+                     data-img="https://images.unsplash.com/photo-1514516816542-ed5af9eb2ec3?q=80&w=800&auto=format&fit=crop"
+                     data-price="1350.00"
+                     data-desc="Trakya kıvırcık kuzu kafes. Antep fıstıklı ve taze baharatlı kabuk, füme patlıcan beğendi, kuzu glaze sos ve fırınlanmış arpacık soğan."
+                     data-allergens="Süt ürünü, Kuruyemiş"
+                     data-calories="880"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1514516816542-ed5af9eb2ec3?q=80&w=800&auto=format&fit=crop" alt="Kuzu Kafes">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Odun Ateşinde Kuzu Kafes</h5>
+                            <span class="product-price ms-3 text-gold">1350.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Fıstık kabuklu Trakya kuzu kafesi, füme patlıcan beğendi ile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Ördek Confit" 
+                     data-img="https://images.unsplash.com/photo-1621220490809-5a50e9bf8c18?q=80&w=800&auto=format&fit=crop"
+                     data-price="1100.00"
+                     data-desc="Kendi yağında 24 saat ağır ateşte pişirilmiş ördek budu. Kereviz püresi, karamelize armut dilimleri ve vişneli porto şarabı sosu."
+                     data-allergens="Süt ürünü, Alkol"
+                     data-calories="760"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621220490809-5a50e9bf8c18?q=80&w=800&auto=format&fit=crop" alt="Ördek">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Ördek Confit</h5>
+                            <span class="product-price ms-3 text-gold">1100.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Kendi yağında konfi ördek budu, kereviz püresi ve vişneli porto sos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Trüflü Yabani Mantar Risotto" 
+                     data-img="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=800&auto=format&fit=crop"
+                     data-price="750.00"
+                     data-desc="Carnaroli pirinci, porçini ve morchella (kuzu göbeği) mantarları. 24 ay yıllandırılmış Parmigiano-Reggiano, mascarpone ve taze siyah trüf mantarı rendesi."
+                     data-allergens="Süt ürünü, Vejetaryen"
+                     data-calories="620"
+                     data-soldout="true">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=800&auto=format&fit=crop" alt="Risotto">
+                        <div class="sold-out-overlay">Mevsimi Değil</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Trüflü Yabani Mantar Risotto</h5>
+                            <span class="product-price ms-3 text-gold">750.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Porçini ve kuzu göbeği mantarlı, taze trüf rendesi ile risotto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TATLILAR -->
+        <div id="list-tatlilar" class="row row-cols-1 row-cols-md-2 g-4 product-list-container" style="display:none;">
+            <div class="col-12 col-md-12 mb-2">
+                <div class="card product-card open-product signature-dish"
+                     data-title="Altın Varaklı Çikolata Küresi" 
+                     data-img="https://images.unsplash.com/photo-1601314115456-42fcbcbf8978?q=80&w=800&auto=format&fit=crop"
+                     data-price="650.00"
+                     data-desc="Valrhona %70 bitter çikolatadan el yapımı küre. İçerisinde madagaskar vanilyalı dondurma, orman meyveleri ve fındık pralin. Masada sıcak çikolata sosu dökülerek servis edilir, 24 ayar altın varak detaylıdır."
+                     data-allergens="Süt ürünü, Kuruyemiş"
+                     data-calories="750"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1601314115456-42fcbcbf8978?q=80&w=800&auto=format&fit=crop" alt="Çikolata Küresi">
+                        <span class="badge badge-luxury position-absolute top-0 start-0 m-3 p-2">İmza Tatlı</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Altın Varaklı Çikolata Küresi</h5>
+                            <span class="product-price ms-3 text-gold fw-bold">650.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Valrhona çikolatasından küre, masada sıcak sos eşliğinde eriyen sürpriz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Narenciye & Fesleğen Sorbe" 
+                     data-img="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?q=80&w=800&auto=format&fit=crop"
+                     data-price="350.00"
+                     data-desc="Sicilya limonları ve taze fesleğen ile hazırlanan ferahlatıcı sorbe. Yuzu jeli ve çıtır mereng parçaları ile. Yemeği hafif bitirmek isteyenler için kusursuz bir seçim."
+                     data-allergens="Vegan"
+                     data-calories="180"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?q=80&w=800&auto=format&fit=crop" alt="Sorbe">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Narenciye & Fesleğen Sorbe</h5>
+                            <span class="product-price ms-3 text-gold">350.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Sicilya limonu ve fesleğen sorbesi, yuzu jeli ile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100 open-product"
+                     data-title="Mille-Feuille (Milföy)" 
+                     data-img="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop"
+                     data-price="480.00"
+                     data-desc="Karamelize edilmiş ultra çıtır milföy yaprakları arasında Tahiti vanilyalı diplomat kreması ve taze ahududu dolgusu."
+                     data-allergens="Gluten, Süt ürünü, Yumurta"
+                     data-calories="550"
+                     data-soldout="false">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop" alt="Mille-Feuille">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="product-title luxury-font m-0 text-gold">Tahiti Vanilyalı Mille-Feuille</h5>
+                            <span class="product-price ms-3 text-gold">480.00 ₺</span>
+                        </div>
+                        <p class="product-desc mb-0">Çıtır milföy yaprakları, vanilyalı krem diplomat ve taze ahududu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ŞARAP KAVI -->
+        <div id="list-sarap" class="row row-cols-1 g-4 product-list-container" style="display:none;">
+            <div class="col-12 text-center mb-3">
+                <p class="text-muted" style="font-family: 'Playfair Display', serif; font-style: italic;">"Şarap, şişelenmiş şiirdir." – Robert Louis Stevenson</p>
+                <div class="elegant-divider w-50 mx-auto"></div>
+            </div>
+            
+            <h4 class="text-gold mt-0 mb-3" style="font-family: 'Outfit'; font-weight:300; letter-spacing: 2px;">Bordo (Bordeaux) Kırmızıları</h4>
+            <div class="col">
+                <div class="card product-card open-product"
+                     data-title="Château Margaux, Premier Grand Cru Classé 2015" 
+                     data-img="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop"
+                     data-price="65000.00"
+                     data-desc="Bordeaux, Fransa. Olağanüstü bir rekolte. Siyah meyve, trüf, menekşe ve sedir notaları ile zarif, ipeksi ve sonsuz bir bitiş. <b>Sadece şişe açılır.</b>"
+                     data-allergens="Sülfit"
+                     data-calories=""
+                     data-soldout="false">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="product-title luxury-font m-0 text-gold">Château Margaux 2015</h5>
+                            <p class="product-desc mb-0 mt-1" style="font-size: 0.85rem;">Premier Grand Cru Classé - Bordeaux, Fransa</p>
+                        </div>
+                        <span class="product-price text-gold fw-bold">65,000 ₺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card open-product"
+                     data-title="Château Lynch-Bages, Pauillac 2018" 
+                     data-img="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=800&auto=format&fit=crop"
+                     data-price="18500.00"
+                     data-desc="Bordeaux, Fransa. Güçlü tanenler, olgun cassis ve meşe dokunuşları ile gövdeli bir Pauillac klasiği."
+                     data-allergens="Sülfit"
+                     data-calories=""
+                     data-soldout="false">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="product-title luxury-font m-0 text-gold">Château Lynch-Bages 2018</h5>
+                            <p class="product-desc mb-0 mt-1" style="font-size: 0.85rem;">Pauillac - Bordeaux, Fransa</p>
+                        </div>
+                        <span class="product-price text-gold fw-bold">18,500 ₺</span>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-gold mt-4 mb-3" style="font-family: 'Outfit'; font-weight:300; letter-spacing: 2px;">Premium Beyazlar & Şampanya</h4>
+            <div class="col">
+                <div class="card product-card open-product"
+                     data-title="Dom Pérignon Vintage 2013" 
+                     data-img="https://images.unsplash.com/photo-1599516641885-3b95a89fb3af?q=80&w=800&auto=format&fit=crop"
+                     data-price="22000.00"
+                     data-desc="Champagne, Fransa. Beyaz çiçekler, narenciye ve hafif brioche notalarıyla olağanüstü kompleks ve zarif bir şampanya."
+                     data-allergens="Sülfit"
+                     data-calories=""
+                     data-soldout="false">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="product-title luxury-font m-0 text-gold">Dom Pérignon Vintage 2013</h5>
+                            <p class="product-desc mb-0 mt-1" style="font-size: 0.85rem;">Şampanya - Fransa</p>
+                        </div>
+                        <span class="product-price text-gold fw-bold">22,000 ₺</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW: PRODUCT (Ürün Detay Sayfası)             -->
+    <!-- ============================================== -->
+    <div id="view-product" class="app-view">
+        <div class="d-flex align-items-center mb-4">
+            <a href="#" id="btn-back-category" class="text-light me-3"><i class="fa-solid fa-chevron-left fa-xl" style="color: var(--accent-copper);"></i></a>
+        </div>
+
+        <div class="card product-card" style="border-bottom: none;">
+            <div class="product-img-wrapper" style="padding-top: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+                <img id="prod-detail-img" src="" alt="Ürün" style="transform: none !important;">
+                <div id="prod-detail-soldout" class="sold-out-overlay" style="display:none; font-size: 2rem;">TÜKENDİ</div>
+            </div>
+            
+            <div class="card-body p-0 mt-4">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4" style="border-color: var(--border-delicate) !important;">
+                    <h2 id="prod-detail-title" class="luxury-font m-0 text-gold" style="font-size: 2rem;">Ürün Adı</h2>
+                    <h3 id="prod-detail-price" class="product-price m-0 ms-3 text-gold fw-bold" style="font-size: 1.5rem;">0.00 ₺</h3>
+                </div>
+                
+                <p id="prod-detail-desc" class="fs-5" style="line-height: 1.8; color: var(--text-primary); font-weight: 300;">
+                    Açıklama metni buraya gelecek.
+                </p>
+                
+                <div class="elegant-divider"></div>
+                
+                <div class="row mt-4">
+                    <div class="col-6 mb-3" id="prod-detail-allergens" style="display:none;">
+                        <h6 class="text-uppercase" style="color: var(--text-muted); letter-spacing: 2px; font-size: 0.75rem;">
+                            <i class="fa-solid fa-seedling me-1" style="color: var(--accent-copper);"></i> ALERJEN & DİYET
+                        </h6>
+                        <div id="allergens-wrapper" class="mt-2">
+                            <!-- JS ile doldurulacak -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-6 mb-3" id="prod-detail-calories" style="display:none;">
+                        <h6 class="text-uppercase" style="color: var(--text-muted); letter-spacing: 2px; font-size: 0.75rem;">
+                            <i class="fa-solid fa-fire-flame-simple me-1" style="color: var(--accent-copper);"></i> BESİN DEĞERİ
+                        </h6>
+                        <div class="fs-5 text-light mt-1" style="font-family: 'Playfair Display', serif;"><span id="calories-val">0</span> <span class="fs-6 text-muted" style="font-family: 'Outfit';">kcal</span></div>
+                    </div>
+                </div>
+                
+                <div class="mt-5 p-4 rounded text-center" style="background-color: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-delicate);">
+                    <h6 class="luxury-font mb-2 text-gold" style="font-size: 1.2rem;"><i class="fa-solid fa-bell-concierge me-2"></i>Sipariş Ver</h6>
+                    <p class="small text-muted mb-0">Lütfen siparişinizi masanızla ilgilenen servis personelimize iletiniz.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
